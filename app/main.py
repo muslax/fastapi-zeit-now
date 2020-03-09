@@ -38,7 +38,7 @@ def welcome(name=None):
     if name is not None:
         return f"Welcome to serverless FastAPI, { name }!"
 
-    return "Welcome to serverless FastAPI!"
+    return "SELAMAT DATANG di serverless FastAPI!"
 
 
 @app.post("/users/", response_model=schemas.User)
