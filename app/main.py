@@ -11,7 +11,7 @@ from .database import SessionLocal, engine
 # This simplifies the serverless example.
 # models.Base.metadata.create_all(bind=engine)
 
-app = FastAPI()
+app = FastAPI(title='Fast API on Vercel')
 
 
 # Dependency
