@@ -1,3 +1,4 @@
+import os
 from typing import List
 
 from fastapi import Request, Depends, FastAPI, HTTPException
@@ -38,7 +39,8 @@ def welcome(name=None):
     if name is not None:
         return f"Welcome to serverless FastAPI, { name }!"
 
-    return "SELAMAT BERGABUNG di serverless FastAPI!"
+    myvar = os.getenv('MYVAR')
+    return myvar  # "SELAMAT BERGABUNG di serverless FastAPI!"
 
 
 @app.post("/users/", response_model=schemas.User)
