@@ -40,7 +40,7 @@ def welcome(name=None):
         return f"Welcome to serverless FastAPI, { name }!"
 
     myvar = os.getenv('MYVAR')
-    return myvar  # "SELAMAT BERGABUNG di serverless FastAPI!"
+    return myvar 
 
 
 @app.post("/users/", response_model=schemas.User)
