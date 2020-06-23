@@ -40,7 +40,9 @@ def welcome(name=None):
         return f"Welcome to serverless FastAPI, { name }!"
 
     myvar = os.getenv('MYVAR')
-    return myvar 
+    falsevar = os.getenv('FALSEVAR', 'IS FALLBACK')
+
+    return myvar + ': ' + falsevar 
 
 
 @app.post("/users/", response_model=schemas.User)
