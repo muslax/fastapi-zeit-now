@@ -39,6 +39,7 @@ def welcome(name=None):
     if name is not None:
         return f"Welcome to serverless FastAPI, { name }!"
 
+    # New deployment needed after changing env
     myvar = os.getenv('MYVAR')
     falsevar = os.getenv('FALSEVAR', 'IS FALLBACK')
 
